@@ -18,3 +18,13 @@ while not is_game_over:
     else:
         p_x_pos += 2
         e_x_pos += 1
+
+x_pos = 5
+movements = [1, -2, 6, -3, -2, 4]
+
+#for 'temp variable' in 'tuple or list'
+#always visits every element in array
+for movement in movements:
+    x_pos += movement
+print(x_pos)
+
