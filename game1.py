@@ -36,6 +36,17 @@ class Game:
             pygame.display.update()
             clock.tick(self.TICK_RATE)
 
+class GameObject:
+
+    def __init__(self, image_pah, x, y, width, height):
+        object_image = pygame.image.load(image_path)
+        self.image = pygame.transform.scale(object_image, (width, heigh))
+        self.x_pos = x
+        self.y_pos = y
+
+    def draw(self, background):
+        background.blit(self.image, (self.x_pos, self.y_pos))
+
 pygame.init()
 
 new_game = Game(SCREEN_TITLE, SCREEN_WIDTH, SCREEN_HEIGHT)
